@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Link from 'gatsby-link';
 import Instafeed from 'instafeed.js';
+require('smoothscroll-polyfill').polyfill();
 
 
 
@@ -16,6 +17,7 @@ import Player from '../partials/Player';
 const feed = new Instafeed({
   get: 'user',
   userId: '304471643',
+  // userId: '1530157927',
   clientId: '4dfa053dff9b46f884f135b1e7f991b1',
   accessToken: '304471643.4dfa053.e0751648762b4ed187e9e432b9befcdd',
   resolution: 'standard_resolution',
@@ -96,9 +98,9 @@ const Contact = () => (
     </div>
     <footer>
       <div>
-        <span>Top</span>
-        <span>Recent</span>
-        <span>Music</span>
+        <span onClick={() => document.getElementsByTagName('header')[0].scrollIntoView({ behavior: 'smooth' })}>Top</span>
+        <span onClick={() => document.getElementsByTagName('video')[0].scrollIntoView({ behavior: 'smooth' })}>Recent</span>
+        <span onClick={() => document.getElementsByClassName('moreMusic')[0].scrollIntoView({ behavior: 'smooth' })}>Music</span>
       </div>
     </footer>
   </section>
@@ -114,6 +116,7 @@ class Feed extends Component {
         <div>
           <h2>@ksupremenaz <span>84K followers</span></h2>
           <div id="instafeed" className="grid"></div>
+          <button>Instagram</button>
         </div>
       </section>
     )
@@ -224,7 +227,6 @@ const IndexPage = () => (
           <a href="">
             <i className="fa fa-instagram" aria-hidden="true"></i>
           </a>
-
         </span>
         <h1>$upreme</h1>
         <h4>NAZ</h4>

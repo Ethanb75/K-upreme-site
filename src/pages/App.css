@@ -246,6 +246,13 @@ header {
   font-size: 1rem;
   text-transform: lowercase;
 }
+.feed button {
+  background: transparent;
+  margin-top: 1rem;
+  padding: .7rem 1.6rem;
+  border: 1px solid white;
+  color: white;
+}
 .grid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -431,4 +438,5 @@ footer {
 footer span {
   padding: 2rem;
   font-size: 1.35rem;
+  cursor: pointer;
 }

@@ -19,6 +19,11 @@ class Nav extends Component {
   state = {
     navShowing: false
   }
+  scrollToArea(ev, element) {
+    ev.preventDefault();
+    element.scrollIntoView({ behavior: 'smooth' });
+    this.setState({ navShowing: false });
+  }
   componentDidMount() {
     let scrolling = document.getElementsByTagName('video')[0].getBoundingClientRect();
     let navClassList = document.getElementsByTagName('nav')[0].classList;
@@ -46,10 +51,10 @@ class Nav extends Component {
     return (
       <nav style={navShowing ? { zIndex: '1000' } : {}}>
         <div className="navMenu" style={navShowing ? { opacity: '1', transform: 'translateX(0%)' } : { opacity: '0', transform: 'translateX(100%)' }}>
-          <div><a href="">HOME</a></div>
-          <div><a href="">MERCH</a></div>
-          <div><a href="">LISTEN</a></div>
-          <div><a href="">CONTACT</a></div>
+          <div><a href="" onClick={ev => this.scrollToArea(ev, document.getElementsByTagName('header')[0])}>HOME</a></div>
+          {/* <div><a href="">MERCH</a></div> */}
+          <div><a href="" onClick={ev => this.scrollToArea(ev, document.getElementsByClassName('moreMusic')[0])}>LISTEN</a></div>
+          <div><a href="" onClick={ev => this.scrollToArea(ev, document.getElementsByClassName('feet')[0])}>CONTACT</a></div>
         </div>
         <div>
           <h1 style={{ margin: 0, padding: '1rem' }} className="logo">
