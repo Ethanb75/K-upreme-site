@@ -79,6 +79,7 @@ header {
   position: relative;
   margin-left: 10rem;
   align-self: center;
+  background-color: rgb(25,25,25);
 }
 
 .videoAbout {
