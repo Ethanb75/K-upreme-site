@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600,700');
+@import url('./range.css');
+
+
+
+span, p, li, a, button, label, * {
+  font-family: 'Josefin Sans', Helvetica, sans-serif;
+  font-weight: 600;
+}
+h1,h2,h3 {
+  font-family: 'Josefin Sans', Helvetica, sans-serif
+}
+
+
+
+/* HERO */
+header {
+  display: flex;
+  flex-direction: row;
+  height: 90.8vh;
+  align-items: center;
+}
+
+.left {
+  width: 38vw;
+  /* min-width: 38vw; */
+  height: 100%;
+  background: rgb(25,25,25);
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1em;
+}
+.left h1 {
+  font-size: 8em;
+  position: relative;
+}
+
+.right {
+  padding-left: 1em;
+  position: relative;
+  flex-grow: 1;
+}
+.right h1 {
+  font-size: 8em;
+  margin-top: 16.5rem;
+  position: relative;
+}
+.right span {
+  position: absolute;
+  top: 16.5rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right h4 {
+  font-size: 4em;
+  line-height: .5;
+  font-family: 'Permanent Marker', Courier New, Courier, monospace;
+  margin-left: .3em;
+}
+
+
+/*RECENT MUSIC*/
+
+.recentMusic > div {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.recentMusic video {
+  width: 68%;
+  z-index: 10;
+  position: relative;
+  margin-left: 10rem;
+  align-self: center;
+}
+
+.videoAbout {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.videoAbout h4 {
+  font-size: 5em;
+  margin-bottom: .2rem;
+}
+
+.recentMusic > div > span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgb(25, 25, 25) none repeat scroll 0% 0%;
+  padding: 0rem 38vw 10rem 2rem;
+  color: white;
+  text-transform: uppercase;
+}
+.recentMusic > div > span > span {
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  display: block;
+  letter-spacing: .5rem;
+}
+
+
+/* MORE MUSIC*/
+
+.moreMusic {
+  display: flex;
+  width: 100%;
+}
+.moreMusic > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+}
+.moreMusic > div:nth-of-type(1) img {
+  margin-left: 10rem;
+  width: 25rem;
+}
+.moreMusic > div {
+  flex-grow: 1;
+}
+.moreMusic > div:nth-of-type(2) img {
+  width: 7rem;
+  align-self: center;
+}
+.moreMusic > div:nth-of-type(2) {
+  width: 38vw;
+  background-color: rgb(25,25,25);
+  padding: 20rem 6rem;
+  position: relative;
+  color: white;
+  top: -5rem;
+}
+.moreMusic > div:nth-of-type(2) ul {
+  list-style: none;
+  padding-left: 2rem;
+  border-left: 2px solid rgb(10,10,10);
+  margin: 2.5rem 0rem;
+  color: rgba(255,255,255,.4);
+}
+.moreMusic > div:nth-of-type(2) li {
+  cursor: pointer;
+  padding: .35rem;
+  margin: 0
+}
+.moreMusic > div:nth-of-type(2) li:hover {
+  background: rgba(255,255,255,.05);
+}
+.moreMusic > div:nth-of-type(2) ul span {
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  margin-right: 1rem;
+}
+.moreMusic > div:nth-of-type(2) ul span:hover {
+  color: white;
+}
+.musicSub {
+  position: absolute;
+  right: 5rem;
+  top: 10rem;
+}
+.musicSub span {
+  transform: rotate(90deg);
+  transform-origin: top right;
+  display: block;
+  letter-spacing: .5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.currentAlbum {
+  display: flex;
+}
+.currentAlbum > div {
+  margin-left: 2rem;
+  flex-grow: 1;
+}
+.currentAlbum h3 {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.currentAlbum button {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,.8);
+  cursor: pointer;
+}
+.currentAlbum button:hover {
+  color: white;
+}
+.currentSong span {
+  color: white !important;
+}
+.playing {
+  padding-top: 1.5rem;
+}
+.playing h5 {
+  font-size: 1.5rem;
+}
+.playing span {
+  font-size: .9rem;
+  color: rgba(255,255,255,.9)
+}
+.musicPlayer > button {
+  display: none;
+}
+
+
+
+/* FEED */
+.feed {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(25,25,25);
+}
+.feed > div {
+  margin: 10rem 0rem;
+}
+.feed > * {
+  width: 62vw;
+}
+.feed h2 {
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.feed h2 > span {
+  float: right;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+}
+
+.box {
+  height: 32rem;
+  background-position: center center;
+  position: relative;
+}
+.box span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .2s ease-out;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.box span:hover {
+  opacity: 1;
+}
+
+
+/* MUSIC PLAYER */
+.player_controls {
+  display: flex;
+  align-items: center;
+}
+.player_controls i {
+  padding: 0rem;
+}
+.player_controls > button {
+  position: relative;
+  left: -.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 2.5rem;
+  font-size: 1.5em;
+}
+.player_controls > button:hover {
+  color: rgba(255,255,255,.8);
+}
+.player_controls > span {
+  display: flex;
+  align-items: center;
+}
+.player_controls > span:nth-of-type(2) {
+  margin-left: 2.5rem;
+}
+.player_controls > span:nth-of-type(2) i {
+  margin-right: .5rem;
+}
+.player_controls > span > input {
+  width: 5rem;
+}
+
+
+
+/*CONTACT FORM*/
+.contactWrap {
+  display: flex;
+  margin-top: 10rem;
+}
+.contactTitle {
+  position: absolute;
+}
+.contactTitle > div {
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+.contactWrap textarea, .contactWrap input {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border: 1px solid rgb(25, 25, 25);
+}
+.contactWrap form {
+  width: 62vw;
+  display: flex;
+  flex-direction: column;
+  padding-left: 19vw;
+}
+.contactWrap form > div {
+  display: flex;
+}
+.contactWrap form > div span {
+  padding: 1rem 0rem;
+  flex-grow: 1;
+}
+.contactWrap form > div span:nth-of-type(1) {
+  padding-right: 1rem;
+}
+.contactWrap form > div span input {
+  width: 100%;
+}
+.contactWrap label {
+  display: block;
+}
+.buttons {
+  margin-top: 1rem;
+}
+.buttons button {
+  font-size: 1.5rem;
+  padding: 1.2rem 2.5rem;
+  background: transparent;
+  border: 1px solid rgb(25, 25, 25);
+  cursor: pointer;
+}
+.buttons button:nth-of-type(1) {
+  color: white;
+  background-color: rgb(25, 25, 25);
+  margin-right: 1rem;
+}
+.otherContact {
+  margin-top: 1.2rem;
+  padding-left: 5rem;
+}
+.otherContact a {
+  color: rgb(25, 25, 25);
+  text-decoration: none;
+}
+.otherContact i {
+  padding-right: 1rem;
+}
+.otherContact > div {
+  padding: 1rem 0rem;
+  text-transform: uppercase;
+}
+footer {
+  display: flex;
+  height: 38vh;
+  justify-content: center;
+  align-items: center;
+}
+footer span {
+  padding: 2rem;
+  font-size: 1.35rem;
+}

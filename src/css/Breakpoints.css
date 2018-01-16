@@ -1,0 +1,106 @@
+@keyframes slideUp {
+  from {transform: translateY(100%)}
+  to {transform: translateY(0%)}
+}
+
+@media screen and (max-width: 980px) {
+  .right h1, .left h1 {
+    font-size: 7em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .left {
+    /* min-width: 19.2vw; */
+  }
+  .right h1, .left h1 {
+    font-size: 4.2em;
+  }
+  .right h1 {
+    margin-top: 9rem;
+  }
+  .right span {
+    top: 15rem;
+  }
+  .right h4 {
+    font-size: 2em;
+  }
+
+  /*RECENT*/
+  .recentMusic video {
+    width: 100%;
+    margin-left: 0;
+  }
+  .recentMusic > div {
+    flex-direction: column;
+  }
+  .videoAbout {
+    margin: 2rem;
+    margin-top: 1rem;
+  }
+  .videoAbout h4 {
+    font-size: 2.5em;
+  }
+
+
+  /*MORE MUSIC*/
+  .musicSub {
+    right: 2rem;
+  }
+  .currentAlbum h3 {
+    font-size: 2.5em;
+    display: inline;
+  }
+  .moreMusic > div:nth-of-type(1) {
+    display: none;
+  }
+  .moreMusic > div:nth-of-type(2) {
+    top: 0;
+    width: auto;
+    padding: 10rem 2rem;
+  }
+  .moreMusic > div:nth-of-type(2) > div:nth-of-type(2) {
+    max-height: 19.2rem;
+    overflow-y: scroll;  
+  }
+
+  /*FEED*/
+  .feed > * {
+    width: 90.8vw;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+  }
+  /*CONTACT*/
+  .contactTitle > div {
+    transform: none;
+    margin-left: 4.9vw;
+    top: -2rem;
+  }
+  .contactWrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .otherContact, .contactWrap form {
+    width: 90%;
+  }
+  .otherContact {
+    padding-left: 0;
+  }
+  .contactWrap form {
+    padding-left: 0;
+  }
+  .feet {
+    position: relative;
+  }
+  .buttons button {
+    font-size: 1.2rem;
+    padding: .8rem 1.5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .logo {
+    font-size: 2rem;
+  }
+}

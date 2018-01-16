@@ -1,0 +1,57 @@
+/* NAV MENU */
+nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.navDown {
+  position: fixed;
+  background-color: rgb(10,10,10);
+  z-index: 1000;
+  animation: slideIn .2s ease-out;
+}
+@keyframes slideIn {
+  from {transform: translateY(-100%)}
+  to {transform: translateY(0%)}
+}
+@keyframes slideOut {
+  from {transform: translateY(0%)}
+  to {transform: translateY(-100%)}
+}
+.navDown span > span {
+  background-color: white !important;
+}
+.navMenu {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all .3s ease-in;
+  background: rgba(25,25,25,.95);
+  z-index: 100;
+}
+.navMenu > div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navMenu a {
+  color: white;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-decoration: none;
+  transition: all .2s ease-out;
+}
+.navMenu a:hover {
+  letter-spacing: 1.5rem;
+  font-size: 4.8rem;
+}
+
+nav > div:nth-of-type(2) {
+  z-index: 1000;
+  position: relative;
+}
