@@ -225,8 +225,9 @@ const IndexPage = () => (
     </header>
     <RecentMusic />
     <MoreMusic />
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <span style={{ width: '62vw', letterSpacing: '.5rem', margin: '2.5rem 0rem' }}>FEED</span>
+    <div className="feedIntro">
+      <span>FEED</span>
+      <div></div>
     </div>
     <Feed />
     <Contact />

@@ -13,7 +13,10 @@
     height: 85vh;
   }
   .left {
-    /* min-width: 19.2vw; */
+    padding-right: .35rem;
+  }
+  .right {
+    padding-left: .35rem;
   }
   .right h1, .left h1 {
     font-size: 4.2em;
@@ -48,9 +51,10 @@
   /*MORE MUSIC*/
   .musicSub {
     right: 2rem;
+    top: 8rem;
   }
   .currentAlbum h3 {
-    font-size: 2.5em;
+    font-size: 2em;
     display: inline;
   }
   .moreMusic > div:nth-of-type(1) {
@@ -65,15 +69,15 @@
     max-height: 19.2rem;
     overflow-y: scroll;  
   }
-  .moreMusic > div:nth-of-type(2) ul {
+  /* .moreMusic > div:nth-of-type(2) ul {
     padding-left: 1rem;
-  }
+  } */
   .moreMusic > div:nth-of-type(2) li {
     font-size: .7rem;
   }
   .playing h5 {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.35rem;
   }
   .playerButtons > span > input {
     width: 4rem;
@@ -84,10 +88,25 @@
   .feed > * {
     width: 90.8vw;
   }
+  .feed h2 {
+    font-size: 2rem;
+  }
   .grid {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 0px;
+  }
+  .feedIntro div {
+    display: block;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2Fksupreme_small.png?alt=media&token=85c9a0ff-ea28-42ab-bda8-f3807f8ac461);
+    background-position: center center;
+    width: 62vw;
+    height: 38vw;
+  }
+  .feedIntro span {
+    margin-left: 1rem;
+    flex-grow: 1;
+    width: auto;
   }
   /*CONTACT*/
   .contactTitle > div {
@@ -125,5 +144,12 @@
   }
   .right h1, .left h1 {
     font-size: 3.5em;
+  }
+  /*FEED*/
+  .feed h2 {
+    font-size: 1.6rem;
+  }
+  .feed h2 > span {
+    font-size: .8rem;
   }
 }

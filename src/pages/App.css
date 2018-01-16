@@ -272,9 +272,22 @@ header {
   font-size: 1.2rem;
   text-align: center;
 }
-
 .box span:hover {
   opacity: 1;
+}
+.feedIntro {
+  display: flex;
+  justify-content: center;
+}
+.feedIntro span {
+  width: 62vw;
+  letter-spacing: .5rem;
+  margin: 2.5rem 0rem
+}
+.feedIntro div {
+  display: none;
+  margin: 0;
+  width: 62vw;
 }
 
 
@@ -351,6 +364,9 @@ header {
   padding: 1.5rem;
   font-size: 1.5rem;
   border: 1px solid rgb(25, 25, 25);
+}
+.contactWrap textarea {
+  height: 15vh;
 }
 .contactWrap form {
   width: 62vw;
