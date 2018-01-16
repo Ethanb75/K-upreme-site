@@ -6,9 +6,7 @@ import Instafeed from 'instafeed.js';
 
 import './App.css';
 import '../css/Breakpoints.css';
-import angle from './angle.svg';
-import vid from '../assets/vid.mp4';
-import song1 from '../assets/song1.png';
+
 import './fonts/font-awesome/css/font-awesome.min.css';
 
 import Player from '../partials/Player';
@@ -195,7 +193,7 @@ const RecentMusic = () => (
       <span>
         <span>Recent</span>
       </span>
-      <video src={vid} controls></video>
+      <video src="https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2Fvid.mp4?alt=media&token=6fe2bf80-e04b-4050-bc95-33ae9c5f8066" controls></video>
       <div className="videoAbout">
         <div>
           <h4>Stuck</h4>
