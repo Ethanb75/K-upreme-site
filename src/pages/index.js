@@ -193,7 +193,7 @@ const RecentMusic = () => (
       <span>
         <span>Recent</span>
       </span>
-      <video src="https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2Fvid.mp4?alt=media&token=6fe2bf80-e04b-4050-bc95-33ae9c5f8066" controls></video>
+      <video width="100%" src="https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2Fvid.mp4?alt=media&token=6fe2bf80-e04b-4050-bc95-33ae9c5f8066" controls></video>
       <div className="videoAbout">
         <div>
           <h4>Stuck</h4>
@@ -215,9 +215,16 @@ const IndexPage = () => (
       </div>
       <div className="right">
         <span>
-          <i className="fa fa-twitter" aria-hidden="true"></i>
-          <i className="fa fa-facebook" style={{ margin: '1rem 0rem' }} aria-hidden="true"></i>
-          <i className="fa fa-instagram" aria-hidden="true"></i>
+          <a href="">
+            <i className="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i className="fa fa-facebook" style={{ margin: '1rem 0rem' }} aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i className="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+
         </span>
         <h1>$upreme</h1>
         <h4>NAZ</h4>
