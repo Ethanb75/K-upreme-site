@@ -9,6 +9,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  header {
+    height: 85vh;
+  }
   .left {
     /* min-width: 19.2vw; */
   }
@@ -62,6 +65,20 @@
     max-height: 19.2rem;
     overflow-y: scroll;  
   }
+  .moreMusic > div:nth-of-type(2) ul {
+    padding-left: 1rem;
+  }
+  .moreMusic > div:nth-of-type(2) li {
+    font-size: .7rem;
+  }
+  .playing h5 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .playerButtons > span > input {
+    width: 4rem;
+  }
+
 
   /*FEED*/
   .feed > * {
@@ -70,7 +87,7 @@
   .grid {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 5px;
+    grid-gap: 0px;
   }
   /*CONTACT*/
   .contactTitle > div {
@@ -102,5 +119,11 @@
 @media screen and (max-width: 420px) {
   .logo {
     font-size: 2rem;
+  }
+  .left {
+    min-width: 25vw;
+  }
+  .right h1, .left h1 {
+    font-size: 3.5em;
   }
 }

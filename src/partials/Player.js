@@ -112,30 +112,34 @@ export default class Player extends Component {
           onDuration={this.onDuration}
         />
         <div className="player_controls">
-          <button onClick={ev => this.playPause(ev)}>
-            {playing ? <i className="fa fa-pause" aria-hidden="true"></i> : <i className="fa fa-play" aria-hidden="true"></i>}
-          </button>
-          <span style={{ marginRight: '.5rem' }}>
-            <Duration seconds={duration * played} /> /
-            <Duration seconds={duration} />
-          </span>
-          <input
-            type='range' min={0} max={1} step='any'
-            value={played}
-            onMouseDown={this.onSeekMouseDown}
-            onChange={this.onSeekChange}
-            onMouseUp={this.onSeekMouseUp}
-          />
-          <span>
-            <i className="fa fa-volume-up" aria-hidden="true"></i>
+          <div>
+            <span style={{ marginRight: '.5rem' }}>
+              <Duration seconds={duration * played} /> / <Duration seconds={duration} />
+            </span>
             <input
-              type='range'
-              min={0} max={1}
-              step='any'
-              value={volume}
-              onChange={this.setVolume}
+              type='range' min={0} max={1} step='any'
+              value={played}
+              onMouseDown={this.onSeekMouseDown}
+              onChange={this.onSeekChange}
+              onMouseUp={this.onSeekMouseUp}
             />
-          </span>
+          </div>
+
+          <div className="playerButtons">
+            <button onClick={ev => this.playPause(ev)}>
+              {playing ? <i className="fa fa-pause" aria-hidden="true"></i> : <i className="fa fa-play" aria-hidden="true"></i>}
+            </button>
+            <span>
+              <i className="fa fa-volume-up" aria-hidden="true"></i>
+              <input
+                type='range'
+                min={0} max={1}
+                step='any'
+                value={volume}
+                onChange={this.setVolume}
+              />
+            </span>
+          </div>
         </div>
       </div>
     )

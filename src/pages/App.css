@@ -8,9 +8,10 @@ span, p, li, a, button, label, * {
   font-family: 'Josefin Sans', Helvetica, sans-serif;
   font-weight: 600;
 }
-h1,h2,h3 {
+h1, h2, h3, h4, h5 {
   font-family: 'Josefin Sans', Helvetica, sans-serif
 }
+button:focus {outline:0;}
 
 
 
@@ -88,7 +89,7 @@ header {
 }
 
 .videoAbout h4 {
-  font-size: 5em;
+  font-size: 3em;
   margin-bottom: .2rem;
 }
 
@@ -140,15 +141,16 @@ header {
 }
 .moreMusic > div:nth-of-type(2) ul {
   list-style: none;
-  padding-left: 2rem;
-  border-left: 2px solid rgb(10,10,10);
+  padding-left: .5rem;
   margin: 2.5rem 0rem;
   color: rgba(255,255,255,.4);
 }
 .moreMusic > div:nth-of-type(2) li {
   cursor: pointer;
   padding: .35rem;
-  margin: 0
+  margin: 0;
+  font-size: .8rem;
+  line-height: 1.1;
 }
 .moreMusic > div:nth-of-type(2) li:hover {
   background: rgba(255,255,255,.05);
@@ -160,6 +162,9 @@ header {
 }
 .moreMusic > div:nth-of-type(2) ul span:hover {
   color: white;
+}
+.songList {
+  border-top: 1px solid rgba(255,255,255,.3);
 }
 .musicSub {
   position: absolute;
@@ -182,7 +187,7 @@ header {
   flex-grow: 1;
 }
 .currentAlbum h3 {
-  font-size: 3em;
+  font-size: 2.8em;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
@@ -192,6 +197,7 @@ header {
   border: none;
   color: rgba(255,255,255,.8);
   cursor: pointer;
+  padding-left: .1rem;
 }
 .currentAlbum button:hover {
   color: white;
@@ -204,6 +210,7 @@ header {
 }
 .playing h5 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 .playing span {
   font-size: .9rem;
@@ -275,35 +282,50 @@ header {
 .player_controls {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 .player_controls i {
   padding: 0rem;
 }
-.player_controls > button {
+.player_controls > div:nth-of-type(1) {
+  display: flex;
+  width: 100%;
+}
+.player_controls > div:nth-of-type(1) input {
+  width: auto;
+  flex-grow: 1;
+  background: transparent;
+}
+.playerButtons {
+  width: 100%;
   position: relative;
-  left: -.5rem;
+  margin-top: .5rem;
+}
+.playerButtons > button {
+  position: relative;
   background: transparent;
   border: none;
   color: white;
   cursor: pointer;
-  margin-right: 2.5rem;
   font-size: 1.5em;
+  margin-left: -.5rem;
+  padding: .1rem .5rem;
 }
-.player_controls > button:hover {
-  color: rgba(255,255,255,.8);
-}
-.player_controls > span {
+.playerButtons > span {
   display: flex;
   align-items: center;
+  position: absolute;
+  right: 0;
+  top: .25rem;
 }
-.player_controls > span:nth-of-type(2) {
-  margin-left: 2.5rem;
+.playerButtons > button:hover {
+  color: rgba(255,255,255,.8);
 }
-.player_controls > span:nth-of-type(2) i {
-  margin-right: .5rem;
+.playerButtons > span > input {
+  width: 6rem;
 }
-.player_controls > span > input {
-  width: 5rem;
+.playerButtons > span i {
+  margin-right: 1rem;
 }
 
 

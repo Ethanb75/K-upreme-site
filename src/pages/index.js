@@ -19,7 +19,7 @@ const feed = new Instafeed({
   clientId: '4dfa053dff9b46f884f135b1e7f991b1',
   accessToken: '304471643.4dfa053.e0751648762b4ed187e9e432b9befcdd',
   resolution: 'standard_resolution',
-  // template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+  limit: 6,
   template: `
     <a href="{{link}}" style="background-image: url({{image}})" class="box" target="__blank">
       <span>
@@ -165,11 +165,11 @@ class MoreMusic extends Component {
                   this.setState({ currentAlbum: this.state.currentAlbum === 1 ? 0 : this.state.currentAlbum + 1, currentSong: 0 })
                 }
               }>
-                Next Album <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+                next mixtape <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
               </button>
             </div>
           </div>
-          <div>
+          <div className="songList">
             <ul>
               {this.renderSongList(album)}
             </ul>
