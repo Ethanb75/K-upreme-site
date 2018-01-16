@@ -9,6 +9,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .navMenu a {
+    font-size: 3.2rem;
+  }
   header {
     height: 85vh;
   }
@@ -40,8 +43,8 @@
     flex-direction: column;
   }
   .videoAbout {
-    margin: 2rem;
-    margin-top: 1rem;
+    margin: 1rem;
+    margin-bottom: 2.5rem;
   }
   .videoAbout h4 {
     font-size: 2.5em;
@@ -100,6 +103,7 @@
     display: block;
     background-image: url(https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2Fksupreme_small.png?alt=media&token=85c9a0ff-ea28-42ab-bda8-f3807f8ac461);
     background-position: center center;
+    background-size: cover;
     width: 62vw;
     height: 38vw;
   }
@@ -107,6 +111,9 @@
     margin-left: 1rem;
     flex-grow: 1;
     width: auto;
+  }
+  .box {
+    height: 25rem;
   }
   /*CONTACT*/
   .contactTitle > div {
@@ -127,6 +134,9 @@
   .contactWrap form {
     padding-left: 0;
   }
+  footer {
+    height: 25vh;
+  }
   .feet {
     position: relative;
   }
@@ -136,6 +146,9 @@
   }
 }
 @media screen and (max-width: 420px) {
+  .navMenu a {
+    font-size: 1.8rem;
+  }
   .logo {
     font-size: 2rem;
   }
@@ -151,5 +164,10 @@
   }
   .feed h2 > span {
     font-size: .8rem;
+  }
+  /*CONTACT*/
+  .contactWrap textarea, .contactWrap input {
+   font-size: 1rem;
+   padding: 1rem; 
   }
 }
