@@ -22,6 +22,7 @@ class Nav extends Component {
   scrollToArea(ev, element) {
     ev.preventDefault();
     element.scrollIntoView({ behavior: 'smooth' });
+    document.getElementsByTagName('html')[0].style.overflow = '';
     this.setState({ navShowing: false });
   }
   componentDidMount() {
