@@ -249,12 +249,14 @@ header {
   font-size: 1rem;
   text-transform: lowercase;
 }
-.feed button {
+.feed > div > a {
   background: transparent;
   margin-top: 1rem;
   padding: .7rem 1.6rem;
   border: 1px solid white;
   color: white;
+  position: absolute;
+  text-decoration: none;
 }
 .grid {
   display: grid;

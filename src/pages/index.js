@@ -116,7 +116,7 @@ class Feed extends Component {
         <div>
           <h2>@ksupremenaz <span>84K followers</span></h2>
           <div id="instafeed" className="grid"></div>
-          <button>Instagram</button>
+          <a href="https://www.instagram.com/ksupremenaz/" target="__blank">More</a>
         </div>
       </section>
     )
