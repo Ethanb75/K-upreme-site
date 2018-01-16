@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from 'gatsby-link';
 import Instafeed from 'instafeed.js';
-require('smoothscroll-polyfill').polyfill();
+// require('smoothscroll-polyfill').polyfill();
 
 
 
