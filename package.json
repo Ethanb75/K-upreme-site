@@ -10,8 +10,7 @@
     "instafeed.js": "^1.4.1",
     "mailgun-js": "^0.14.1",
     "node-mailjet": "^3.2.1",
-    "react-player": "^0.25.3",
-    "smoothscroll-polyfill": "^0.4.0"
+    "react-player": "^0.25.3"
   },
   "keywords": [
     "gatsby"
