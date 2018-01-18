@@ -69,8 +69,11 @@
     padding: 10rem 2rem;
   }
   .moreMusic > div:nth-of-type(2) > div:nth-of-type(2) {
-    max-height: 19.2rem;
-    overflow-y: scroll;  
+    max-height: 38vh;
+    overflow-y: scroll;
+   
+    box-shadow: inset  0  8px 8px -8px #696868, 
+                inset  0 -8px 8px -8px #696868;  
   }
   /* .moreMusic > div:nth-of-type(2) ul {
     padding-left: 1rem;
