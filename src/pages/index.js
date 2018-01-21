@@ -98,7 +98,7 @@ const RecentMusic = () => (
       <span>
         <span>Recent</span>
       </span>
-      <video src="https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2Fvid.mp4?alt=media&token=6fe2bf80-e04b-4050-bc95-33ae9c5f8066" preload="metadata" onCanPlay={ev => ev.target.volume = "0"} controls autoPlay="true"></video>
+      <video src="https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2Fvid.mp4?alt=media&token=6fe2bf80-e04b-4050-bc95-33ae9c5f8066" preload="metadata" onCanPlay={ev => ev.target.volume = "0"} controls autoPlay="true" poster="https://firebasestorage.googleapis.com/v0/b/ksupreme-ab898.appspot.com/o/assets%2FvidCover.png?alt=media&token=2c5e20d6-9430-4542-a7c1-f475e6c9bf0b"></video>
       <div className="videoAbout">
         <div>
           <h4>Stuck</h4>
