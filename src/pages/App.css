@@ -244,6 +244,9 @@ header {
   color: white;
   text-transform: uppercase;
 }
+.feed h2 > a {
+  color: white;
+}
 .feed h2 > span {
   float: right;
   font-size: 1rem;

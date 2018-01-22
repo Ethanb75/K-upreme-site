@@ -80,8 +80,9 @@ class Feed extends Component {
     return (
       <section className="feed">
         <div>
-          <h2>@ksupremenaz <span>84K followers</span></h2>
-          <div id="instafeed" className="grid"></div>
+          <h2><a href="https://www.instagram.com/ksupremenaz/">@ksupremenaz</a><span> 84K followers</span></h2>
+          {/* <div id="instafeed" className="grid"></div> */}
+          <div style={{ padding: '10rem 0rem', fontSize: '2.5em', textAlign: 'center', color: 'whitesmoke' }}>Coming Soon</div>
           <a href="https://www.instagram.com/ksupremenaz/" target="__blank">More</a>
         </div>
       </section>
