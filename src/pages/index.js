@@ -12,7 +12,6 @@ import './fonts/font-awesome/css/font-awesome.min.css';
 import Music from '../partials/Music';
 
 
-
 const feed = new Instafeed({
   get: 'user',
   userId: '304471643',
@@ -32,14 +31,49 @@ const feed = new Instafeed({
     </a>`
 });
 
-
+// init email js
 
 
 const Contact = () => (
   <section className="feet">
     <h2 className="contactTitle"><div>Contact</div></h2>
     <div className="contactWrap">
-      <form>
+      <form onSubmit={ev => {
+        ev.preventDefault();
+        emailjs.init("user_dCiSdqLDrAURIDmEOaMQH");
+
+        let name = ev.target.children[0].children[0].children[1].value;
+        let email = ev.target.children[0].children[1].children[1].value;
+        let message = ev.target.children[2].value;
+        let button = document.getElementById('sendMessage');
+
+
+        if (name.length > 1) {
+          if (ev.target.children[0].children[1].children[1].checkValidity) {
+            if (message.length > 2) {
+              button.innerHTML = '<i class="fa fa-circle-o-notch fa-spin fa-fw"></i><span class="sr-only">Loading...</span>';
+              ev.target.children[0].children[0].children[1].value = '';
+              ev.target.children[0].children[1].children[1].value = '';
+              ev.target.children[2].value = '';
+
+              emailjs.send("default_service", "ksupreme", { name, email, message })
+                .then(function (response) {
+                  button.innerHTML = 'Message Sent';
+                  button.setAttribute('disabled', 'true');
+                  button.style = "cursor: default; color: rgba(255,255,255,.4)"
+                }, function (err) {
+                  console.log("FAILED. error=", err);
+                });
+            } else {
+              alert('please enter a message');
+            }
+          } else {
+            alert('please enter a valid email');
+          }
+        } else {
+          alert('please enter a valid name');
+        }
+      }}>
         <div>
           <span>
             <label htmlFor="name">Name</label>
@@ -53,7 +87,7 @@ const Contact = () => (
         <label htmlFor="message">Message</label>
         <textarea name="message"></textarea>
         <div className="buttons">
-          <button>Send Message</button><button>Clear</button>
+          <button id="sendMessage">Send Message</button><button>Clear</button>
         </div>
       </form>
       <div className="otherContact">
@@ -113,37 +147,56 @@ const RecentMusic = () => (
 )
 
 
-const IndexPage = () => (
-  <div>
-    <header>
-      <div className="left">
-        <h1>K</h1>
+class IndexPage extends Component {
+  componentDidMount() {
+    // window.addEventListener('load', () => {
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag() { dataLayer.push(arguments); }
+    // gtag('js', new Date());
+
+    // gtag('config', 'UA-113803954-1');
+    // })
+  }
+  render() {
+    return (
+      <div>
+        <header>
+          <div className="left">
+            <h1>K</h1>
+          </div>
+          <div className="right">
+            <span>
+              <a href="">
+                <i className="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i className="fa fa-facebook" style={{ margin: '1rem 0rem' }} aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i className="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </span>
+            <h1>$upreme</h1>
+            <h4>NAZ</h4>
+          </div>
+        </header>
+        <RecentMusic />
+        <Music />
+        <div className="feedIntro">
+          <span>FEED</span>
+          <div></div>
+        </div>
+        <Feed />
+        <Contact />
       </div>
-      <div className="right">
-        <span>
-          <a href="">
-            <i className="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i className="fa fa-facebook" style={{ margin: '1rem 0rem' }} aria-hidden="true"></i>
-          </a>
-          <a href="">
-            <i className="fa fa-instagram" aria-hidden="true"></i>
-          </a>
-        </span>
-        <h1>$upreme</h1>
-        <h4>NAZ</h4>
-      </div>
-    </header>
-    <RecentMusic />
-    <Music />
-    <div className="feedIntro">
-      <span>FEED</span>
-      <div></div>
-    </div>
-    <Feed />
-    <Contact />
+    )
+  }
+}
+
+const Maintenance = () => (
+  <div style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <span style={{ textAlign: 'center', fontSize: '2em' }}>Sorry, currently undergoing maintenance</span>
   </div>
 )
 
-export default IndexPage
+export default Maintenance;

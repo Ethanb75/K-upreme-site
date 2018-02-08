@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactPlayer from 'react-player';
 
 import Duration from '../js/Duration';
+import 'es6-promise/auto';
 
 const music = [
   {
@@ -76,7 +77,6 @@ export default class Music extends Component {
   }
   playPause = (ev) => {
     this.setState({ playing: !this.state.playing });
-    console.log(ev.target.parentElement.parentElement);
   }
   stop = () => {
     this.setState({ url: null, playing: false })
@@ -128,6 +128,14 @@ export default class Music extends Component {
   }
   ref = player => {
     this.player = player
+  }
+  componentDidMount() {
+    // workaround for ios issues
+    const audio = document.querySelector('audio');
+    if (this.state.playing === true) {
+      audio.load();
+      audio.play();
+    }
   }
   render() {
     const album = music[this.state.currentAlbum];
@@ -190,7 +198,10 @@ export default class Music extends Component {
               onBuffer={() => console.log('onBuffer')}
               onSeek={e => console.log('onSeek', e)}
               onEnded={this.onEnded}
-              onError={e => console.log('onError', e)}
+              onError={e => {
+                console.log('onError', e);
+                // alert('There seems to be an issue with the player and it might not work as intended');
+              }}
               onProgress={this.onProgress}
               onDuration={this.onDuration}
             />

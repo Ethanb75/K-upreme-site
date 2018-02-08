@@ -26,26 +26,25 @@ class Nav extends Component {
     this.setState({ navShowing: false });
   }
   componentDidMount() {
-    let scrolling = document.getElementsByTagName('video')[0].getBoundingClientRect();
-    let navClassList = document.getElementsByTagName('nav')[0].classList;
-    let throttle;
+    // let scrolling = document.getElementsByTagName('video')[0].getBoundingClientRect();
+    // let navClassList = document.getElementsByTagName('nav')[0].classList;
+    // let throttle;
 
-
-    document.addEventListener('scroll', function (ev) {
-      if (throttle) return;
-      // code below
-      if (scrollY >= scrolling.top) {
-        navClassList.add('navDown');
-        navClassList.remove('navUp');
-      } else {
-        navClassList.remove('navDown');
-        navClassList.add('navUp');
-      }
-      // rest of throttle
-      throttle = setTimeout(function () {
-        throttle = undefined;
-      }, 300);
-    });
+    // document.addEventListener('scroll', function (ev) {
+    //   if (throttle) return;
+    //   // code below
+    //   if (scrollY >= scrolling.top) {
+    //     navClassList.add('navDown');
+    //     navClassList.remove('navUp');
+    //   } else {
+    //     navClassList.remove('navDown');
+    //     navClassList.add('navUp');
+    //   }
+    //   // rest of throttle
+    //   throttle = setTimeout(function () {
+    //     throttle = undefined;
+    //   }, 300);
+    // });
   }
   render() {
     const { navShowing } = this.state;
@@ -97,6 +96,8 @@ class Nav extends Component {
   }
 }
 
+
+
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -105,8 +106,12 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
+      script={[
+        { type: 'text/javascript', src: 'https://cdn.emailjs.com/dist/email.min.js' },
+        { type: 'text/javascript', src: 'https://www.googletagmanager.com/gtag/js?id=UA-113803954-1' }
+      ]}
     />
-    <Nav />
+    {/* <Nav /> */}
     <div>
       {children()}
     </div>
